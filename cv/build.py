@@ -41,7 +41,7 @@ def cv_html(c):
     body = [f'<h1>Thomas Goulard</h1><div class="contact">' + "".join(f"<div>{e(x)}</div>" for x in CONTACT + [c["location"]]) + '</div>',
             f'<div class="target">{e(c["target"])}</div>',
             '<h2>Professional experience</h2>',
-            entry("Coverage Analyst – FIG, Corporate & Institutional Banking (Apprentice)", "09/2025 - 08/2026", "BRED Banque Populaire – Groupe BPCE", "Paris, France", c["bred"]),
+            entry(c.get("bred_title", "Assistant Relationship Manager – Financial Institutions (Apprentice)"), "09/2025 - 08/2026", "BRED Banque Populaire – Groupe BPCE", "Paris, France", c["bred"]),
             entry("Relationship Manager – Private Wealth Professionals Sector (Apprentice)", "11/2024 - 08/2025", "Chambre Nationale des Conseils en Gestion de Patrimoine", "Paris, France", c["cncgp"]),
             entry("Relationship Manager – Retail Banking (Apprentice)", "09/2023 - 09/2024", "BNP Paribas", "Paris, France", BNP),
             '<h2>Education</h2>',
